@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+echo "Running Prettier on files..."
+pnpm run pretty
+
+echo "Checking for ESLint rule violations..."
 pnpm run lint

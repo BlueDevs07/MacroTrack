@@ -1,8 +1,11 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "Running Prettier on files..."
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+printf "\n${GREEN}Running Prettier on files...${NC}"
 pnpm run pretty
 
-echo "Checking for ESLint rule violations..."
+printf "\n${GREEN}Checking for ESLint rule violations...${NC}"
 pnpm run lint
